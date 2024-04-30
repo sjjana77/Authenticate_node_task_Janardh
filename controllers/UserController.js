@@ -5,6 +5,8 @@ const jwt = require('jsonwebtoken');
 const secretKey = process.env.JWT_SECRET || 'default_secret_key_here';
 
 async function register(req, res) {
+  console.log("Register API");
+
   try {
     const { name, phone_number, email, password } = req.body;
     const existingUser = await User.findOne({ where: { phone_number } }); //check if phone number is already registered
@@ -20,6 +22,7 @@ async function register(req, res) {
 }
 
 async function login(req, res) {
+  console.log("Login API");
   const { phone_number, password } = req.body;
 
   try {

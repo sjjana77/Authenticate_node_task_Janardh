@@ -8,8 +8,9 @@ const SearchRoutes = require('./Routes/SearchRoutes');
 require('dotenv').config();
 require('./db'); //db configuration established
 
+
 const corsOptions = {
-  origin: ['http://localhost/'],
+  origin: ['http://localhost/','https://authenticate-node-task-janardh-135i.onrender.com'],
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', 
   optionsSuccessStatus: 200
 };
